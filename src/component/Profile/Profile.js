@@ -22,9 +22,9 @@ class Profile extends React.Component {
         <div><img src = { this.props.pictureUrl }></img></div>
         <div>{ this.props.gender }</div>
         <div>{ this.props.fullName }</div>
-        <div>
-          <div onClick= { this.likeThisPerson }>Like</div>
-          <div onClick= { this.DislikeThisPerson }>Dislike</div>
+        <div className="action-btn-wrapper">
+          <div className="action-btn color-like" onClick= { this.likeThisPerson }>Like</div>
+          <div className="action-btn color-dislike" onClick= { this.DislikeThisPerson }>Dislike</div>
         </div>
       </div>
     )

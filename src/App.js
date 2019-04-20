@@ -24,8 +24,22 @@ class App extends Component {
           { !this.props.loading && this.props.users ? <Profile gender= {gender} fullName={fullName} pictureUrl = {pictureUrl}/> : '' }
         </div>
         <div className="user-data">
-          <div>Likes</div>
-          <div>Dislikes</div>
+          <div>
+            Likes
+            { 
+              this.props.usersLiked.map((ele, index) => {
+                return  <div className="mt-10" key = {index}> { ele.name }</div>
+              }) 
+            }
+          </div>
+          <div>
+            Dislikes
+            { 
+              this.props.usersDisliked.map((ele, index) => {
+                return  <div className="mt-10" key = {index}> { ele.name }</div>
+              }) 
+            }
+          </div>
         </div>
       </div>
     );
